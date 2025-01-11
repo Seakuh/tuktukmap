@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TukTuk Booking</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      padding: 20px;
+      text-align: center;
+      background-color: #4CAF50;
+      color: white;
+    }
+    header input {
+      width: 80%;
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    #map {
+      height: 500px;
+    }
+    #notifications {
+      padding: 20px;
+    }
+    .notification {
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 5px;
+      font-size: 16px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .notification.success {
+  background-color: #eaffea; /* Sanftes Grün */
+  border-left: 5px solid #4CAF50;
+}
+
+.notification.success {
+  background-color: #eaffea; /* Sanftes Grün */
+  border-left: 5px solid #e5ff00;
+}
+
+.notification.error {
+  background-color: #ffeaea; /* Sanftes Rot */
+  border-left: 5px solid #f44336;
+}
+
+    @keyframes fadeOut {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>TukTuk Booking</h1>
+    <input id="search-bar" type="text" placeholder="Enter destination address and search for drivers..." />
+  </header>
+  <div id="map"></div>
+  <div id="notifications"></div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Socket.IO -->
+  <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
